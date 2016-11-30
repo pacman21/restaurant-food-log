@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to Restaurant Food Logger!</h2>
+  <p>
+    Rate the food you eat when you go to a restaurant. Never order the same food at a restaurant again if you disliked it. Select a restaurant or add new restaurant to get started.
+  </p>
+  <p class='center'>
+    <button ion-button (click)="addRestaurant()">Add New Restaurant</button>
+  </p>
+  <div class='restaurant-list'>
+    <ion-list>
+      <ion-list-header>Select a Restaurant</ion-list-header>
+      <ion-item *ngFor="let restaurant of restaurantList; let i=index">
+         <a (click)="openPage(restaurant)">{{restaurant.name}}</a>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

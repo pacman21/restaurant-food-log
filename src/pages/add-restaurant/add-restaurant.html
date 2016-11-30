@@ -1,0 +1,24 @@
+<!--
+  Generated template for the AddRestaurant page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>addRestaurant</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+        <ion-label floating>Restaurant Name</ion-label>
+        <ion-input type="text" name="restaurantName" [(ngModel)]="restaurantName"></ion-input>
+    </ion-item>
+    <div class='padding-top center'>
+      <button ion-button (click)="addRestaurant()">Add Restaurant</button>
+    </div>
+</ion-content>

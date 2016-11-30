@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{restaurant.name}} Food Entries
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <p class='center'>
+    <button ion-button (click)="addFoodEntry()">Add Food Entry</button>
+  </p>
+  <ion-list>
+    <ion-list-header>Food Entries</ion-list-header>
+    <ion-item *ngFor="let entry of entryList; let i=index">>
+      {{entry.food_name}}
+    </ion-item>
+  </ion-list>
+</ion-content>
